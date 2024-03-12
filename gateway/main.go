@@ -32,15 +32,29 @@ func run() error {
 	if err != nil {
 		return err
 	}
-
 	// Start HTTP server (and proxy calls to gRPC server endpoint)
 	return http.ListenAndServe(":8081", mux)
 }
 
 func main() {
 	flag.Parse()
-
 	if err := run(); err != nil {
 		grpclog.Fatal(err)
 	}
 }
+
+//func Updated(stu DujiaweiReq) {
+//	res := httplib.Post(ESURL + "dujiawei" + "/_doc/" + "3")
+//
+//	res.JSONBody(stu)
+//
+//	dawei := DujiaweiRes{}
+//	s, err := res.String()
+//	if err != nil {
+//		logs.Info(err)
+//		return
+//	}
+//
+//	json.Unmarshal([]byte(s), &dawei)
+//	fmt.Println(dawei)
+//

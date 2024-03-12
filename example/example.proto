@@ -9,8 +9,6 @@ message YourMessage {
 }
 
 service MyService {
-  rpc SendMessage(YourMessage) returns (YourMessage) {
-
-  }
+  rpc SendMessage(YourMessage) returns (YourMessage) {}
 }
 
