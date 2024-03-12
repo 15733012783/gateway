@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package example;
+option go_package = "./gen";
+
+message YourMessage {
+  string id = 1;
+  string name = 2;
+}
+
+service MyService {
+  rpc SendMessage(YourMessage) returns (YourMessage) {
+
+  }
+}
+
